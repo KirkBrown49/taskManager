@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Manager {
+class TaskManager {
     let task : String
     var dueDate: Date?
     
