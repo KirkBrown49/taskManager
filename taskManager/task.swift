@@ -11,6 +11,7 @@ import Foundation
 class TaskManager {
     let task : String
     var dueDate: Date?
+    var completion: Bool = true
     
     init(task:String) {
     self.task = task
