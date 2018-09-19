@@ -11,6 +11,7 @@ class Menu {
     let application = Manager()
     
     var shouldQuit = false // when this is true , we should quit running the task manager
+    
     func go() {
         // this function will handle making the menu run. it will display the menu and take user input until the user wishes to quit the application
         while !shouldQuit {
@@ -44,8 +45,8 @@ class Menu {
     2.List of all tasks.(Completed and incomplete)
     3.Mark a task completed.
     4.Mark a completed task as incomplete.
-    5.List of only completed tasks.
-    6.List of only uncompleted tasks.
+    5.List of only incompleted tasks.
+    6.List of only completed tasks.
     7.Delete a task.
     8.Exit the program.
     
@@ -76,10 +77,10 @@ class Menu {
             application.markIncompleteTask()
         case "5" :
             // call the completedTask function
-            application.completedTask()
+            application.incompletedTask()
         case "6":
             // call the incompleteTask function
-           application.incompletedTask()
+           application.completedTask()
         case "7":
             // call the deleteTask function
             application.deleteTask()

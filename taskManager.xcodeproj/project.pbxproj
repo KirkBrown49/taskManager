@@ -11,6 +11,7 @@
 		4637737A215023DB000465B4 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46377379215023DB000465B4 /* task.swift */; };
 		4637737C2150259A000465B4 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637737B2150259A000465B4 /* Menu.swift */; };
 		4637737E21502E10000465B4 /* manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637737D21502E10000465B4 /* manager.swift */; };
+		467859F72152BD9200FA6153 /* userNameAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467859F62152BD9200FA6153 /* userNameAndPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		46377379215023DB000465B4 /* task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task.swift; sourceTree = "<group>"; };
 		4637737B2150259A000465B4 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		4637737D21502E10000465B4 /* manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manager.swift; sourceTree = "<group>"; };
+		467859F62152BD9200FA6153 /* userNameAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userNameAndPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				46377379215023DB000465B4 /* task.swift */,
 				4637737B2150259A000465B4 /* Menu.swift */,
 				4637737D21502E10000465B4 /* manager.swift */,
+				467859F62152BD9200FA6153 /* userNameAndPassword.swift */,
 			);
 			path = taskManager;
 			sourceTree = "<group>";
@@ -103,6 +106,7 @@
 				TargetAttributes = {
 					4637736A2150228A000465B4 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -128,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467859F72152BD9200FA6153 /* userNameAndPassword.swift in Sources */,
 				4637737C2150259A000465B4 /* Menu.swift in Sources */,
 				4637737A215023DB000465B4 /* task.swift in Sources */,
 				4637736F2150228A000465B4 /* main.swift in Sources */,
@@ -256,7 +261,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -265,7 +270,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

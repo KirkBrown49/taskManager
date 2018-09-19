@@ -43,6 +43,8 @@ import Foundation
 //Break the program down into smaller pieces! Thinking about it as “Creating a Task Manager” is a lot harder to think about than “Create a menu and display it”.
 //Make sure your code is formatted and commented well!
 
+let userInfo = UserNameAndPassword()
+userInfo.nameAndPassWord()
 print("Welcome to the TaskManager.")
 let applicationMenu = Menu()
 
