@@ -40,12 +40,12 @@ class Manager {
     
     func listAllTask() {
         // the available games so the user will know which game they can choose, if game is not checked in
-                print(completedTask(),incompletedTask())
-                
-                
-                
+        print(completedTask(),incompletedTask())
         
-     
+        
+        
+        
+        
         
     }
     
@@ -87,7 +87,7 @@ class Manager {
     func markIncompleteTask() {
         for index in 0..<taskArray.count {
             
-            // since checkedIn is false it will only show the opposite and show the checked out games
+            // since completion is false it will only marked incomplete task
             if taskArray[index].completion == false {
                 print("\(index). \(taskArray[index].task)")
                 
@@ -95,7 +95,7 @@ class Manager {
         }
         
         print("Please enter the index of the task you wish to mark incomplete")
-        var userInput = Int(readLine()!) // allows the user to select a int to pick the game
+        var userInput = Int(readLine()!) // allows the user to select a int to pick the task
         
         //the user will prompted to enter a valid int
         while userInput == nil {
@@ -117,12 +117,12 @@ class Manager {
                 print(task.task)
                 
             }
-
+            
             if let dueDate = task.dueDate {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM/dd/yyyy"
-                print("The task is to be done by \(dateFormatter.string(from: dueDate))")
-        }
+                print("The task \(task.task) is to be done by \(dateFormatter.string(from: dueDate))")
+            }
             
         }
         
@@ -142,4 +142,40 @@ class Manager {
         }
     }
     
+    func easterEggCharacterPic() {
+        print("you have selected a invalid option")
+        print("Would you like to see something cool? Y/N")
+        var easter = true
+        var easterEggTime = readLine()!.uppercased()
+        
+        while easterEggTime != "Y" && easterEggTime != "N" {
+            print("Would you like to see something cool? Y/N")
+            easterEggTime = readLine()!
+        }
+        
+        if easterEggTime == "N" {
+            easter = false
+        }
+        
+        if easterEggTime == "Y"{
+            print("""
+      nope nervermind
+     
+""")
+            
+        }
+        
+        
+        
+        
+    }
+    
+    func priorityTask(){
+       
+        
+      
+    
+        
+    }
+
 }

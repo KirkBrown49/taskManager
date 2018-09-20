@@ -48,7 +48,8 @@ class Menu {
     5.List of only incompleted tasks.
     6.List of only completed tasks.
     7.Delete a task.
-    8.Exit the program.
+    8.Prioritze a task.
+    9.Exit the program.
     
         Please enter a number between 1 and 8
     """)
@@ -85,9 +86,12 @@ class Menu {
             // call the deleteTask function
             application.deleteTask()
         case "8":
+            
+            application.priorityTask()
+        case "9":
             quit()
-            
-            
+        case "10":
+            application.easterEggCharacterPic()
         default:
             break
             
