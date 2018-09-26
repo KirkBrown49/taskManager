@@ -8,7 +8,7 @@
 
 import Foundation
 class Manager {
-    var taskArray: [TaskManager] = [TaskManager(task:"Get out of bed"),TaskManager(task: "GO to bed")]// create an array to put more tasks in
+    var taskArray: [TaskManager] = [TaskManager(task:"Get out of bed", priority: 4),TaskManager(task: "GO to bed", priority: 5)]// create an array to put more tasks in
     
     func addTask() {// allow the user to add a new task
         print("Please enter a task you would like to add.")
@@ -18,7 +18,7 @@ class Manager {
             print("invalid task. Please enter a task ")
             addedTask = readLine()
         }
-        let newTask = TaskManager(task: addedTask!)
+        let newTask = TaskManager(task: addedTask!, priority: 4)
         taskArray.append(newTask)
     }
     func deleteTask() { // allows the user to remove a task title that they choose.
@@ -39,7 +39,7 @@ class Manager {
     }
     
     func listAllTask() {
-        // the available games so the user will know which game they can choose, if game is not checked in
+        // shows all task
         print(completedTask(),incompletedTask())
         
         
@@ -104,7 +104,7 @@ class Manager {
             
         }
         
-        // if the game has been checked back in the user will know if it has been checked back in
+        // if the task has been checked incomplete tell the user that the user will the task is incomplete
         taskArray[userInput!].completion = true
         
         taskArray[userInput!].dueDate = nil
@@ -130,7 +130,7 @@ class Manager {
     
     func completedTask() {// tells the users if a game is unavailable, they know when they can check it out
         for task in taskArray {
-            if !task.completion {// if the game is checked out it will show the game title
+            if !task.completion {// if the task is completed it will show the task and due date
                 print(task.task)
                 //shows the date that the game is due
                 if let dueDate = task.dueDate {
@@ -145,21 +145,20 @@ class Manager {
     func easterEggCharacterPic() {
         print("you have selected a invalid option")
         print("Would you like to see something cool? Y/N")
-        var easter = true
         var easterEggTime = readLine()!.uppercased()
-        
+        var easter = true
         while easterEggTime != "Y" && easterEggTime != "N" {
-            print("Would you like to see something cool? Y/N")
+            print("Would you like to hear a joke? Y/N")
             easterEggTime = readLine()!
         }
         
         if easterEggTime == "N" {
-            easter = false
+        easter == false
         }
         
-        if easterEggTime == "Y"{
+        while easterEggTime == "Y"{
             print("""
-      nope nervermind
+      You clicked on this easter egg for no reason. Sorry if that's not funny, I'm not a joker.
      
 """)
             
@@ -171,11 +170,32 @@ class Manager {
     }
     
     func priorityTask(){
-       
-        
-      
     
+    
+   
         
-    }
+        
+        
+        }
+    
+
+
+func listByPriority(levels: inout Int)
+{
+    var counter = 0
+    repeat
+    {
+        for _ in taskArray
+        {
+            if taskArray[counter].priority == levels
+            {
+                print(taskArray[counter].task)
+                counter += 1
+            }
+            levels -= 1
+        }
+    } while levels > 0
+}
+
 
 }

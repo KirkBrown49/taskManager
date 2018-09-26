@@ -49,4 +49,5 @@ print("Welcome to the TaskManager.")
 let applicationMenu = Menu()
 
 applicationMenu.go()
+let taskArray: TaskManager
 

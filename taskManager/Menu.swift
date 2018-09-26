@@ -51,7 +51,7 @@ class Menu {
     8.Prioritze a task.
     9.Exit the program.
     
-        Please enter a number between 1 and 8
+        Please enter a number between 1 and 9
     """)
         } else {
             print("Menu Closed")
@@ -112,7 +112,6 @@ class Menu {
         }
         return userInput!
     }
-    
-    
-    
+
+ 
 }

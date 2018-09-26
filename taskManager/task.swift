@@ -12,8 +12,11 @@ class TaskManager {
     let task : String
     var dueDate: Date?
     var completion: Bool = true
+    var priority: Int
+   
     
-    init(task:String) {
+    init(task:String, priority: Int) {
     self.task = task
+    self.priority = priority
     }
 }
